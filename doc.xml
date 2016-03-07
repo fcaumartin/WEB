@@ -1,0 +1,16 @@
+<produits>
+	<produit>
+		<id>12</id>
+		<libelle>Guitare qui joue vite</libelle>
+	</produit>
+	<produit>
+		<id>13</id>
+		<libelle>Guitare qui joue vite</libelle>
+	</produit>
+	<produit>
+		<id>14</id>
+		<libelle>Guitare qui joue vite</libelle>
+	</produit>
+  
+</produits>
+
