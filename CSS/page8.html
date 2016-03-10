@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		#div1 {
+			background-color: green;
+
+		}
+
+		#div2 {
+			background-color: red;
+			width: 800px;
+			height: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		#entete {
+			background-color: yellow;
+			height: 50px;
+		}
+		a {
+			color:white;
+		}
+		nav {
+			color: white;
+			background-color: blue;
+			width: 200px;
+			float: right;
+			text-align: center;
+			transition: background-color 2s ease, height 3s ease;
+			height: 100px;
+		}
+		nav:hover {
+			
+			background-color: pink;
+			height: 200px;
+		}
+		#articles {
+			background-color: purple;
+			width: 550px;
+		}
+		.textegauche {
+			text-align: left;
+		}
+		.textemilieu {
+			text-align: center;
+		}
+		.textedroite {
+			text-align: right;
+		}
+		nav > div:nth-child(1) {
+			text-align: left;
+		}
+		nav > div:nth-child(2) {
+			text-align: center;
+		}
+		nav > div:nth-child(3) {
+			text-align: right;
+		}
+		header {
+			color: white;
+			word-wrap: break-word;
+		}
+
+		@media screen and (max-width: 750px) {
+		  	nav {
+				display: none;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+<div id="div1">
+
+	<div id="div2">
+		<header id="entete">Entete</header>
+		<nav >
+			<div>Menu</div>
+			<div>
+				<a href="">Lien1</a>
+				<a href="">Lien2</a>
+				<a href="">Lien3</a>
+			</div>
+			<div>info</div>
+		</nav>
+		<div id="articles">
+			<article>
+				<header>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</header>
+				<div>Contenu</div>
+				<footer>Pied</footer>
+
+			</article>
+
+			<article>
+				<div>Titre</div>
+				<div>Contenu</div>
+				<div>Pied</div>
+
+			</article>
+
+			<article>
+				<div>Titre</div>
+				<div>Contenu</div>
+				<div>Pied</div>
+
+			</article>
+
+		</div>
+
+	</div>
+	
+</div>
+
+
+</body>
+</html>
