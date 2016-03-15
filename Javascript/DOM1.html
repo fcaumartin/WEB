@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+<form>
+	<input type="radio"></input>
+	<input id="label1" value="60"></input>
+
+</form>
+<div class="gauche">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim </div>
+</body>
+</html>
+
+<script>
+	var elt1 = document.querySelector(".gauche");
+	var elt2 = document.querySelector("#label1");
+
+
+	var riri = function () {
+		var i = parseInt(elt2.value);
+		i--;
+		elt2.value = i;
+		
+		if (i==0) {
+			clearInterval(timer1);
+		}
+	}
+
+	
+	//elt1.innerHTML = "rien";
+	elt1.style.visibility = "visible";
+	//elt2.value = "riri";
+
+	var timer1 = setInterval(riri, 100);
+</script>
