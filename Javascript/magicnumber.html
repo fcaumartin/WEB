@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+var magic = Math.floor(Math.random()*100)+1;
+console.log(magic);
+var reponse;
+
+do {
+	reponse = parseInt(prompt("Un nombre ?"));
+	console.log(reponse);
+	if (reponse < magic) {
+		alert("Trop petit");
+	}
+	if (reponse > magic) {
+		alert("Trop grand");
+	}
+	if (isNaN(reponse)) {
+		break;
+	}
+} while (magic != reponse);
+
+if (magic == reponse) {
+	alert("Gagné");
+}
+
+
+
+</script>

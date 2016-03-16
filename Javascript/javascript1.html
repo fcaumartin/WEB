@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+	var chaine = "(2+30)/8";
+
+	var result = eval(chaine);
+
+	console.log(result);
+
+	//var tab = new Array();
+	var tab = [];
+
+	// tab.prenom = "riri";
+	// tab.ville = "fifi";
+	// tab.nom = "loulou";
+	tab[0] = "riri";
+	tab[1] = "fifi";
+	tab[2] = "loulou";
+	tab.push("donald");
+	tab.unshift("picsou");
+
+	document.write(tab);
+
+	console.log(tab.length);
+
+	for (var x in tab) {
+		console.log(x);
+	}
+
+	for (var x in tab) {
+		console.log(tab[x]);
+	}
+
+	// for (let x of tab) {
+	// 	console.log(x);
+	// }
+
+	console.log(tab);
+
+
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+	
+	var tab = [];
+	var reponse;
+
+	do {
+		reponse = parseInt(prompt("Entrez un nombre"));
+		if (reponse != 0) {
+			tab.push(reponse);
+		}
+	} while (reponse !=0);
+
+	var somme = 0;
+	
+	for (var x in tab) {
+		console.log(tab[x]);
+		somme += tab[x];
+	}
+	console.log("x=%s", x);
+
+	console.log(somme);
+	console.log(somme/tab.length);
+
+
+
+</script>

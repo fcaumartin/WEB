@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+	
+	var expression = new RegExp("^[a-z]+$");
+	var expression = /^[a-z]+$/;
+
+	var result = expression.test("toto23");
+
+	console.log(result);
+
+	console.log(/^[a-z]+$/.test("toto"));
+
+
+	var expdate = new RegExp("^(\\d{2})/(\\d{2})/(\\d{4})$");
+
+	var result2 = expdate.exec("12/05/2016");
+
+	console.log(result2[1]);
+	console.log(result2[2]);
+	console.log(result2[3]);
+
+
+</script>
