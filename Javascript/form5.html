@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		textarea:focus, input:focus{
+		    outline: none;
+		}
+	</style>
+	
+</head>
+<body>
+
+<form action="http://serveur/script.php" method="post" id="form1">
+	Nom 	<input type="text" name="nom" id="txtBox1" /><br />
+	Prenom	<input type="text" name="prenom" id="txtBox2" /><br />
+	Ville	<input type="text" name="ville"/><br />
+	<input type="button" value="Envoyer" id="btn1"/>
+	
+</form>
+
+</body>
+</html>
+
+<script>
+		function verif(evt) {
+			console.log("submit");
+			
+			var txtBox1 = document.querySelector("#txtBox1");
+			if (/^[a-z]+$/.test(txtBox1.value)==false)
+				return;
+
+			var txtBox2 = document.querySelector("#txtBox2");
+			if (/^[a-z]+$/.test(txtBox2.value)==false)
+				return;
+
+			form1.submit();
+			
+		}
+
+		var form1 = document.querySelector("#form1");
+		var btn1 = document.querySelector("#btn1");
+		btn1.addEventListener("click", verif);
+
+	</script>

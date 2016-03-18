@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		textarea:focus, input:focus{
+		    outline: none;
+		}
+	</style>
+	<script>
+		function verif() {
+			//var txtBox1 = document.querySelector("#txtBox1");
+			var txtBox1 = document.getElementById("txtBox1");
+			if (txtBox1.value != "")
+				return true;
+			else 
+				return false;
+		}
+
+	</script>
+</head>
+<body>
+
+<form action="http://serveur/script.php" method="post" onsubmit="return verif();">
+	Nom 	<input type="text" name="nom" id="txtBox1" /><br />
+	Prenom	<input type="text" name="prenom"/><br />
+	Ville	<input type="text" name="ville"/><br />
+	<input type="submit" value="Envoyer"/>
+	
+</form>
+
+</body>
+</html>

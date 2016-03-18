@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		textarea:focus, input:focus{
+		    outline: none;
+		}
+	</style>
+</head>
+<body>
+
+<form action="http://serveur/script.php" method="post">
+	Nom 	<input 
+				required 
+				title="Entrez votre nom" 
+				pattern="[a-z]+"
+				type="text" 
+				name="nom"
+			/><br />
+	Prenom	<input required title="Entrez votre nom"  type="text" name="prenom"/><br />
+	Ville	<input required title="Entrez votre nom"  type="text" name="ville"/><br />
+	<input type="submit" value="Envoyer"/>
+	
+</form>
+
+</body>
+</html>
