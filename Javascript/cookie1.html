@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+	function getCookie(name) {
+		var tCookies = document.cookie.split(/;/);
+		console.log(tCookies);
+		for(var i=0; i < tCookies.length; i++) {
+			tCookies[i] = tCookies[i].split(/=/);
+			console.log(tCookies[i]);
+			if (tCookies[i][0].trim() == name) 
+				return unescape(tCookies[i][1]);
+		}
+		return null ;
+	}
+		
+		document.cookie = "compteur=1";
+		console.log(document.cookie);
+		console.log(getCookie("nom"));
+	</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
