@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="todoApp" >
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	<script src="angular.min.js"></script>
+	<script src="module1.js"></script>
+</head>
+<body>
+	<div ng-controller="TodoListController as todoList">
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+      <input ng-model="todoList.textBox" ></input>
+
+      <a href="#" ng-click="todoList.ajoute()">ajouter</a>
+       <ul >
+        <li ng-repeat="cli in todoList.clients">
+          
+            
+            <span >{{cli.nom}} {{cli.prenom}}</span>
+          
+        </li>
+      </ul>
+
+
+      <ul >
+        <li ng-repeat="cli in todoList.clients">
+          
+            
+            <input ng-model="cli.nom" value="{{cli.nom}}" /><br>
+          
+        </li>
+      </ul>
+    </div>
+</body>
+</html>
