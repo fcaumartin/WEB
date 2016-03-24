@@ -5,28 +5,29 @@
 </head>
 <body>
 
-	<?php for ($i=0; $i<500; $i++) { ?>
-		<div > 
-			<?=$i?>Coucou 
-		</div>
-	<?php } ?>
+<?php 
 
+	for ($i=1; $i < 150; $i+=2) { 
+				
+					echo $i . "<br>";
+				
+	}
 
-	<?php 
-		for ($i=0; $i<500; $i++) { 
-			echo "<div > $i Coucou </div>";
-		} 
-	?>
-
-<?php
-	$a=2;
-
-	echo $a;
-
-	$b="a";
-
-	echo $$b;
 ?>
+
+
+<?php for ($i=1; $i < 150; $i+=2) { ?>
+			<div >
+				<?=$i?>  <br> 
+			</div>
+<?php } ?>
+
+
+<?php for ($i=1; $i < 150; $i+=2): ?>
+			<div >
+				<?=$i?>  <br> 
+			</div>
+<?php endfor; ?>
 
 </body>
 </html>
