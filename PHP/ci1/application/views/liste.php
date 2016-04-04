@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="">
 </head>
 <body>
 <h2><?=$titre?></h2>

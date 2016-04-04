@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+<h1>Liste des liens</h1>
+
+<div id="panel1">
+	
+
+</div>
+</body>
+</html>
+
+<script>
+$(document).ready(function() {
+
+	//$("#panel1").load("liste2.php");
+
+	$.get("liste3-json.php", function(data) {
+		console.dir(data);
+		for (var i = 0; i< data.length ; i++) {
+			$("#panel1").append(data[i].cli_nom + "<br>");
+		}
+	});
+	$.get("http://api.themoviedb.org/3/search/movie?api_key=f33cd318f5135dba306176c13104506a&query=avengers", function(data) {
+		console.dir(data);
+		for (var i = 0; i< data.results.length ; i++) {
+			$("#panel1").append(data.results[i].title + "<br>");
+		}
+	});
+});
+
+</script>
