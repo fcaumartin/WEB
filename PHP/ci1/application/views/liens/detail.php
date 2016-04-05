@@ -4,6 +4,6 @@
 	<title></title>
 </head>
 <body>
-Client Ajoute
+
 </body>
 </html>
