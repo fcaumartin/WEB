@@ -1,0 +1,21 @@
+
+<form id="form1" >
+	Titre<input type="text" name="titre" /> <br />
+	URL<input type="text" name="url" /> <br />
+	Description<textarea name="description" ></textarea> <br />
+	
+</form>
+	<button id="btn3">Ajouter</button>
+
+<script>
+	$("#btn3").click(function() {
+		$.post(
+			"ajout_script.php", 
+			$("#form1").serialize(), 
+			function () {
+				$("#label1").load("liste.php");
+			}
+		);
+	});
+
+</script>

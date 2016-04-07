@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	
+</head>
+<body>
+<button id="btn1">Liste</button>
+<button id="btn2">Ajouter</button>
+<div id="label1">test</div>
+
+</body>
+</html>
+
+<script>
+	$(document).ready(function() {
+		$("#btn1").click(function() {
+			$("#label1").load("liste.php");
+		});
+		$("#btn2").click(function() {
+			$("#label1").load("formulaire.html");
+		});
+	});
+</script>
