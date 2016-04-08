@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+	
+</head>
+<body>
+<input id="textBox1" type="text" />
+<div id="label1"></div>
+
+</body>
+</html>
+
+<script>
+	$(document).ready(function() {
+		$("#label1").load("liste.php");
+		$("#textBox1").on('input',function() {
+			console.log("test");
+			$("#label1").load("liste.php?query="+$("#textBox1").val());
+		});
+	});
+</script>
