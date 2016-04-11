@@ -36,7 +36,8 @@
 		
 		var id = $(this).data("id");
 		console.log(id);
-		$("#label1").load("detail.php?id="+id);
+		$("#label2").load("detail.php?id="+id);
+		$("#label2").dialog();
 		//$.post("detail.php", "id="+id, function(data) {});
 	});
 </script>

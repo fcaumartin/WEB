@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+<div id="label1"></div>
+</body>
+</html>
+
+<script>
+	$(document).ready(function () {
+		$.get("http://api.themoviedb.org/3/search/movie?api_key=f33cd318f5135dba306176c13104506a&query=avengers", function (data) {
+				
+				for (var i = 0; i < data.results.length; i++) {
+					console.log(data.results[i].title);
+					$("#label1").append(data.results[i].release_date);
+					$("#label1").append(data.results[i].title);
+					$("#label1").append("<br>");
+				}
+		})
+	});
+
+</script>
