@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+	<script src="jquery.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+	<style>
+		#detailsFilm img {
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div data-role="page" id="page1">
+
+		<div data-role="header">
+			<h1>VillageGreen - Recherche</h1>
+			<input type="search" id="txt1" value="" placeholder="titre du film">
+			<a id="btn1" class="ui-btn ui-corner-all">Rechercher</a>
+		</div>
+
+		<div role="main" class="ui-content">
+			
+			<div data-iscroll>
+		 		<ul data-role="listview" id="list1">
+
+		 		</ul>
+		 	</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h4>TheMovieDB - Recherche</h4>
+		</div>
+	</div>
+
+	
+</body>
+</html>
+
+<script>
+$(document).ready(function() {
+	$("#txt1").on("input", function(){
+		var mot = encodeURI($("#txt1").val());
+		var donnees = "query=" + mot;
+		var apiURL = "http://localhost/liste.php";
+		$.ajax({
+ 			url: apiURL,
+ 			data: donnees,
+ 			success: function (resultat) {
+ 				console.log(resultat);
+ 				AfficheResult(resultat);
+ 			},
+ 			error: function (request,error) {
+ 				alert('Une erreur est survenue, vous devez saisir un texte');
+ 			}
+ 		});
+	});
+	
+});
+
+var listeDesFilms = null;
+
+function AfficheResult(data){
+	$('#list1').empty();
+	for (var i=0; i< data.length; i++) {
+		var ligne = data[i];
+		codeHTML = '<li>';
+		codeHTML += '<h3>' + ligne.titre + '</h3>';
+		codeHTML += '<p>' + ligne.webmaster + '</p>';
+		codeHTML += '<p>' + ligne.url + '</p>';
+		codeHTML += '<p>' + ligne.description + '</p>';
+		codeHTML += '</a>';
+		codeHTML += '</li>';
+		$('#list1').append(codeHTML);
+	}
+	$('#list1').listview('refresh');
+
+	
+}
+
+</script>
